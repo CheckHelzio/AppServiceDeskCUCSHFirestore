@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "855539527860",
+    "firebase_url": "https://servicedeskcucsh-95291.firebaseio.com",
+    "project_id": "servicedeskcucsh-95291",
+    "storage_bucket": "servicedeskcucsh-95291.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855539527860:android:537e53533b7ae0c7",
+        "android_client_info": {
+          "package_name": "checkhelzio.ccv.servicedeskcucsh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855539527860-0901b4a2cj5hcngbmio678mcv1qpeq17.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "checkhelzio.ccv.servicedeskcucsh",
+            "certificate_hash": "811eae4e1889d530efd238331947a8833d05c823"
+          }
+        },
+        {
+          "client_id": "855539527860-5n58mgar96ei4usdkgjgrlpj75eom53g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB327iwILsvnc6y32_cbMzscLLDEGF_R38"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855539527860-5n58mgar96ei4usdkgjgrlpj75eom53g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855539527860:android:2c861dc0e9f99e7b",
+        "android_client_info": {
+          "package_name": "ccv.checkhelzio.servicedeskcucsh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855539527860-c3kbp8fmh77rse6pf6vocse4o5i1mqco.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ccv.checkhelzio.servicedeskcucsh",
+            "certificate_hash": "811eae4e1889d530efd238331947a8833d05c823"
+          }
+        },
+        {
+          "client_id": "855539527860-5n58mgar96ei4usdkgjgrlpj75eom53g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB327iwILsvnc6y32_cbMzscLLDEGF_R38"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855539527860-5n58mgar96ei4usdkgjgrlpj75eom53g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424242"
+    android:baselineAligned="false"
+    android:clipToPadding="false"
+    android:orientation="horizontal"
+    tools:context="ccv.checkhelzio.servicedeskcucsh.IncidenteListActivity">
+
+
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/incidente_list"
+        android:name="ccv.checkhelzio.servicedeskcucsh.IncidenteListFragment"
+        android:layout_width="@dimen/item_width"
+        android:layout_height="match_parent"
+        android:elevation="12dp"
+        android:background="#424242"
+        android:visibility="invisible"
+        app:elevation="12dp"
+        app:layoutManager="LinearLayoutManager"
+        tools:context="ccv.checkhelzio.servicedeskcucsh.IncidenteListActivity"
+        tools:listitem="@layout/incidente_list_item" />
+
+    <FrameLayout
+        android:id="@+id/incidente_detail_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3" />
+
+</LinearLayout>

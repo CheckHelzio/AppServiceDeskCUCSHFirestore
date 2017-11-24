@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_label_estatus"
+            style="@style/label_list_item"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_estatus" />
+
+        <TextView
+            android:id="@+id/tv_progreso"
+            style="@style/value_list_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            tools:text="Registrado" />
+
+        <TextView
+            android:id="@+id/tv_fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="8sp"
+            tools:ignore="SmallSp"
+            tools:text="27/03/2017" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:id="@+id/tv_label_quien"
+            style="@style/label_list_item"
+            android:layout_height="wrap_content"
+            android:text="Por quién:" />
+
+        <TextView
+            android:id="@+id/tv_nombre"
+            style="@style/value_list_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            tools:text="Oscar Méndez Hernández" />
+
+        <TextView
+            android:id="@+id/tv_hora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="8sp"
+            tools:ignore="SmallSp"
+            tools:text="05:00 PM" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:id="@+id/tv_label_mensaje"
+            style="@style/label_list_item"
+            android:layout_height="wrap_content"
+            android:text="Mensaje:"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_estatus" />
+
+        <TextView
+            android:id="@+id/tv_mensaje"
+            style="@style/value_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:maxLines="33"
+            android:visibility="gone"
+            tools:text="Mensaje lha sdkjh asdlkjh asdkljh aslkdjh aslkdjh asldkjh asldkjh asldkjh asdlkjha sdlkjha sdlkjha sdlkjah sdlkjah sdlkjahs dlkjahs dlkjashd lkjadsh lkajsdh lkajsdh lkas d" />
+    </LinearLayout>
+
+
+</LinearLayout>

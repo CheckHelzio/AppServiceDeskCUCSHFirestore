@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424242"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/header_tablet"
+        android:elevation="8dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                app:srcCompat="@drawable/logo_cta_sin_letras" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="88dp"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:text="Service Desk CUCSH"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <LinearLayout
+        android:id="@+id/super_conte"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_subtitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:gravity="center"
+                android:text="DATOS DEL CLIENTE"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="24dp"
+                    android:paddingStart="24dp">
+
+                    <ImageView
+                        android:id="@+id/iv_codigo"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_codigo"
+                        android:tint="#fff" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_codigo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/iv_codigo"
+                        android:gravity="center"
+                        app:hintTextAppearance="@style/hint_reporte">
+
+                        <EditText
+                            android:id="@+id/et_codigo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/label_codigo"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:textColor="#FFF"
+                            android:textColorHint="#FFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="24dp"
+                    android:paddingStart="24dp">
+
+                    <ImageView
+                        android:id="@+id/iv_nombre"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_cerrar_sesion"
+                        android:tint="#fff" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/iv_nombre"
+                        app:hintTextAppearance="@style/hint_reporte">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/et_nombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/label_nombre"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:textColor="#FFF"
+                            android:textColorHint="#FFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="24dp"
+                    android:paddingStart="24dp">
+
+                    <ImageView
+                        android:id="@+id/iv_dependencia"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_edificio"
+                        android:tint="#fff" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_dependencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/iv_dependencia"
+                        app:hintTextAppearance="@style/hint_reporte">
+
+                        <EditText
+                            android:id="@+id/et_dependencia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/label_dependencia"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:textColor="#FFF"
+                            android:textColorHint="#FFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="24dp"
+                    android:paddingStart="24dp">
+
+                    <ImageView
+                        android:id="@+id/iv_ubicacion"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_location"
+                        android:tint="#fff" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_ubicacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/iv_ubicacion"
+                        app:hintTextAppearance="@style/hint_reporte">
+
+                        <EditText
+                            android:id="@+id/et_ubicacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/label_ubicacion"
+                            android:inputType="textCapSentences"
+                            android:maxLines="1"
+                            android:textColor="#FFF"
+                            android:textColorHint="#FFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="24dp"
+                    android:paddingStart="24dp">
+
+                    <ImageView
+                        android:id="@+id/iv_telefono"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_phone"
+                        android:tint="#fff" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_telefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/iv_telefono"
+                        app:hintTextAppearance="@style/hint_reporte">
+
+                        <EditText
+                            android:id="@+id/et_telefono"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/label_telefono"
+                            android:inputType="phone"
+                            android:maxLines="1"
+                            android:textColor="#FFF"
+                            android:textColorHint="#FFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="24dp"
+                    android:paddingStart="24dp">
+
+                    <ImageView
+                        android:id="@+id/iv_correo"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_mail"
+                        android:tint="#fff" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_correo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/iv_correo"
+                        app:hintTextAppearance="@style/hint_reporte">
+
+                        <EditText
+                            android:id="@+id/et_correo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/label_correo"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:textColor="#FFF"
+                            android:textColorHint="#FFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:isScrollContainer="false"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_subtitulo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="DATOS DEL INCIDENTE"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:paddingEnd="24dp"
+                android:weightSum="6">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="24dp">
+
+                    <ImageView
+                        android:id="@+id/iv_incidente"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_incidente"
+                        android:tint="#fff" />
+
+                    <LinearLayout
+                        android:id="@+id/tipo_problema"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/iv_incidente"
+                        android:background="?selectableItemBackground"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_label_areas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tipo de incidente:"
+                            android:textColor="#FFF"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/sp_areas"
+                            style="@style/SpinnerTextViewItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Selecciona el tipo de incidente"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <View
+                            android:id="@+id/view_tipo_incidente_error"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:layout_marginTop="8dp"
+                            android:background="#86ffffff" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:isScrollContainer="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="24dp">
+
+                    <ImageView
+                        android:id="@+id/iv_prioridad"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_prioridad"
+                        android:tint="#fff" />
+
+
+                    <TextView
+                        android:id="@+id/tv_label_prioridad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/conte_prioridad"
+                        android:layout_toRightOf="@id/iv_prioridad"
+                        android:text="Prioridad:"
+                        android:textColor="#FFF"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/conte_prioridad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/iv_prioridad"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-3dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radio_baja"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:text="Baja"
+                                android:textSize="14sp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_media"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Media"
+                                android:textSize="14sp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_alta"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Alta"
+                                android:textSize="14sp" />
+
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="4dp"
+                            android:background="#86ffffff" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:paddingEnd="24dp">
+
+                    <ImageView
+                        android:id="@+id/iv_descripcion"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="24dp"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_descripcion"
+                        android:tint="#fff" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_descripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_toEndOf="@+id/iv_descripcion"
+                        android:gravity="center"
+                        app:hintTextAppearance="@style/hint_reporte">
+
+                        <EditText
+                            android:id="@+id/et_descripcion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Descripción del incidente:"
+                            android:inputType="textCapSentences"
+                            android:textColor="#FFF"
+                            android:textColorHint="#FFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/bt_guardar_reporte"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="Enviar reporte"
+                        android:textColor="@color/colorAccent" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="CtaHeaderLogin" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:background">@drawable/header_tablet</item>
+        <item name="logo">@drawable/logo_cta_sin_letras</item>
+        <item name="title">"Login - Service Desk CUCSH"</item>
+    </style>
+
+</resources>

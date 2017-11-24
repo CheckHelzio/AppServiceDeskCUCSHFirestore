@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Service Desk CUCSH</string>
+    <string name="app_version">Versión 2.0</string>
+    <string name="title_incidente_list">Incidentes</string>
+    <string name="title_incidente_detail">Incidente Detail</string>
+    <string name="label_tecnico">Técnico:</string>
+    <string name="label_estatus">Estatus:</string>
+    <string name="label_folio">Folio:</string>
+    <string name="label_nombre">Nombre:</string>
+    <string name="label_dependencia">Dependencia:</string>
+    <string name="label_ubicacion">Ubicacion:</string>
+    <string name="label_progreso">Progreso:</string>
+    <string name="label_descripcion">Descripción:</string>
+    <string name="label_incidente">Incidente:</string>
+    <string name="label_correo">Correo:</string>
+    <string name="label_telefono">Teléfono:</string>
+    <string name="label_codigo">Código:</string>
+    <string name="transition_tipo_incidente">transition_tipo_incidente</string>
+
+    <string-array name="array_areas">
+        <item>Redes y Telefonía</item>
+        <item>Taller de cómputo</item>
+        <item>Multimedia</item>
+        <item>Administrativa</item>
+        <item>Aviso General</item>
+    </string-array>
+</resources>

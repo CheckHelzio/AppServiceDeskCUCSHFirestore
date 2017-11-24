@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp">
+
+    <TextView
+        android:id="@+id/tv_label_folio"
+        style="@style/label_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_folio"
+        app:layout_constraintBottom_toTopOf="@+id/tv_label_estatus"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_label_estatus"
+        style="@style/label_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_estatus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_label_tecnico"
+        style="@style/label_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_tecnico"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_estatus" />
+
+    <TextView
+        android:id="@+id/tv_folio"
+        style="@style/value_list_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_estatus"
+        app:layout_constraintEnd_toStartOf="@+id/tv_fecha"
+        app:layout_constraintStart_toEndOf="@+id/tv_label_tecnico"
+        tools:text="0322" />
+
+    <TextView
+        android:id="@+id/tv_estatus"
+        style="@style/value_list_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_fecha"
+        app:layout_constraintStart_toEndOf="@+id/tv_label_tecnico"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="En proceso" />
+
+    <TextView
+        android:id="@+id/tv_asignado"
+        style="@style/value_list_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_fecha"
+        app:layout_constraintStart_toEndOf="@+id/tv_label_tecnico"
+        app:layout_constraintTop_toBottomOf="@id/tv_estatus"
+        tools:text="Oscar Méndez Hernández" />
+
+    <TextView
+        android:id="@+id/tv_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_folio"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SmallSp"
+        tools:text="27/03/2017" />
+
+    <TextView
+        android:id="@+id/tv_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_estatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SmallSp"
+        tools:text="05:00 PM" />
+
+    <View
+        android:id="@+id/tv_prioridad"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/prioridad_alta"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_asignado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_asignado"
+        tools:layout_conversion_absoluteHeight="8dp"
+        tools:layout_conversion_absoluteWidth="8dp" />
+
+</android.support.constraint.ConstraintLayout>

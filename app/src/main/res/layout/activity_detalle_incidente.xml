@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinador"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424242"
+    android:elevation="8dp">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_detalle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/main.collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="#00000000">
+
+            <RelativeLayout
+                android:id="@+id/conte_folio"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/reveal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:paddingBottom="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_folio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="-6dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        tools:text="Folio 2845" />
+
+                    <TextView
+                        android:id="@+id/tv_tecnico"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="Técnico: Zyanya López Díaz" />
+
+                    <TextView
+                        android:id="@+id/tv_marca_agua"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="11sp"
+                        tools:text="Registrado por Elba - 31/05/2017 a las 8:54 PM" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/separador1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="16dp"
+                android:background="#00000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/separador1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_cerrar_sesion"
+                        android:tint="#fff"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/label_nombre"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="12dp"
+                        android:background="#00000000"
+                        android:maxLines="1"
+                        android:paddingEnd="56dp"
+                        android:paddingStart="72dp"
+                        android:text="@string/label_nombre"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_nombre"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_nombre"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="72dp"
+                        android:layout_marginTop="-4dp"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_edificio"
+                        android:tint="#fff"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/label_dependencia"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="12dp"
+                        android:background="#00000000"
+                        android:maxLines="1"
+                        android:paddingEnd="56dp"
+                        android:paddingStart="72dp"
+                        android:text="@string/label_dependencia"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_dependencia"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_dependencia"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="72dp"
+                        android:layout_marginTop="-4dp"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_location"
+                        android:tint="#fff"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/label_ubicacion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="12dp"
+                        android:background="#00000000"
+                        android:maxLines="1"
+                        android:paddingEnd="56dp"
+                        android:paddingStart="72dp"
+                        android:text="@string/label_ubicacion"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_ubicacion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_ubicacion"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="72dp"
+                        android:layout_marginTop="-4dp"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_phone"
+                        android:tint="#fff"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/label_telefono"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="12dp"
+                        android:background="#00000000"
+                        android:maxLines="1"
+                        android:paddingEnd="56dp"
+                        android:paddingStart="72dp"
+                        android:text="@string/label_telefono"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_telefono"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_telefono"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="72dp"
+                        android:layout_marginTop="-4dp"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_mail"
+                        android:tint="#fff"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/label_correo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="12dp"
+                        android:background="#00000000"
+                        android:maxLines="1"
+                        android:paddingEnd="56dp"
+                        android:paddingStart="72dp"
+                        android:text="@string/label_correo"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_correo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_correo"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="72dp"
+                        android:layout_marginTop="-4dp"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#86ffffff" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_incidente"
+                        android:tint="#fff"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/label_incidente"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="12dp"
+                        android:background="#00000000"
+                        android:maxLines="1"
+                        android:paddingEnd="56dp"
+                        android:paddingStart="72dp"
+                        android:text="@string/label_incidente"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_incidente"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_incidente"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="72dp"
+                        android:layout_marginTop="-4dp"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#86ffffff" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_info"
+                        android:tint="#fff"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/label"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="12dp"
+                        android:background="#00000000"
+                        android:maxLines="1"
+                        android:paddingEnd="56dp"
+                        android:paddingStart="72dp"
+                        android:text="@string/label_descripcion"
+                        android:textColor="#fff"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tv_descripcion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="72dp"
+                        android:layout_marginTop="-4dp"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#86ffffff" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:descendantFocusability="blocksDescendants"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_progress"
+                        android:tint="#fff" />
+
+                    <TextView
+                        android:id="@+id/label_progreso"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="12dp"
+                        android:background="#00000000"
+                        android:maxLines="1"
+                        android:paddingEnd="56dp"
+                        android:paddingStart="72dp"
+                        android:text="Progreso:"
+                        android:textColor="#fff"
+                        android:textSize="12sp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_progreso"
+                        android:focusable="false"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_progreso"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="72dp"
+                        android:layout_marginTop="-4dp"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:textColor="#fff"
+                        android:textSize="18sp">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_tomar"
+        android:tint="#fff"
+        app:layout_anchor="@id/nestedScrollView"
+        app:layout_anchorGravity="bottom|end" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_mas"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        android:tint="#fff"
+        app:layout_anchor="@id/nestedScrollView"
+        app:layout_anchorGravity="bottom|end" />
+</android.support.design.widget.CoordinatorLayout>
